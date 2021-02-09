@@ -16,8 +16,7 @@
             {{ form.as_p }}
             <button type="submit">Submit</button>
 
-        </form>
-                <!-- will return a message if the post was successfully submitted or not-->
+            <!-- will return a message if the post was successfully submitted or not-->
             {% if messages %}
             <ul class="messages">
             {% for message in messages %}
@@ -25,6 +24,8 @@
             {% endfor %}
             </ul>
             {% endif %}
+
+        </form>
 
 </body>
 </html>

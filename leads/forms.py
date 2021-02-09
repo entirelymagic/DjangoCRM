@@ -6,10 +6,15 @@ class LeadModelForm(forms.ModelForm):
     class Meta:
         model = Lead
         fields = (
-        "first_name",
-        "last_name",
-        "age",
-        "agent",
+            "first_name",
+            "last_name",
+            "age",
+            "agent",
+            "phone_nr",
+            "phoned",
+            "sources",
+            'profile_picture',
+            'special_files'
 
         )
 
