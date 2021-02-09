@@ -27,7 +27,7 @@ body {
 }
 .radiant_blue_green {
     background-image: linear-gradient(to bottom right, #79aec8, #2b2b2b, #a9a9a9, #2b2b2b, #717070 );
-    height: 1000px;
+    height: 940px;
     display: block;
 }
 .lead-grid-container {
@@ -66,4 +66,12 @@ body {
 #submint_lead_btt {
     z-index:1;
     background-color: green;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }

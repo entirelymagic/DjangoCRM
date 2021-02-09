@@ -9,22 +9,15 @@
 <body class = "radiant_blue_green">
     <h2>Create a new Lead</h2>
 
-<div><<a href="/leads">Go Back</a></div>
+<<a href="/leads">Go Back</a>
 
         <form method = "POST" action=".">
             {% csrf_token %} <!-- csrf_token need for submiting forms -->
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
 
-        <div class="individual-lead-grid-container"> <!-- Container for introducing lead formats -->
-          <div class="individual-lead-grid-container_item">First Name:</div>
-          <div class="individual-lead-grid-container_item">{{ form.first_name }} </div>
-          <div class="individual-lead-grid-container_item">Last Name:  </div>
-          <div class="individual-lead-grid-container_item">{{ form.last_name }} </div>
-          <div class="individual-lead-grid-container_item">Age: </div>
-          <div class="individual-lead-grid-container_item">{{ form.age }} </div>
-
-            <button id="submint_lead_btt"type="submit">Submit</button>
-
-            <!-- will return a message if the post was successfully submitted or not-->
+        </form>
+                <!-- will return a message if the post was successfully submitted or not-->
             {% if messages %}
             <ul class="messages">
             {% for message in messages %}
@@ -32,10 +25,6 @@
             {% endfor %}
             </ul>
             {% endif %}
-        <div></div>
-        <div></div>
-        </div>
-        </form>
 
 </body>
 </html>
