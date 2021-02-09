@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lead Detail</title>
+    <link href="{% static 'leads/css/leads.css' %}" rel="stylesheet">
+</head>
+<body class = "radiant_blue_green">
+    <h2>Lead details for {{ lead.first_name }} {{ lead.last_name }}</h2>
+<div><<a href="/leads">Go Back</a></div>
+        <div class="individual-lead-grid-container">
+          <div class="individual-lead-grid-container_item">First Name:</div>
+          <div class="individual-lead-grid-container_item">{{ lead.first_name }} </div>
+          <div class="individual-lead-grid-container_item">Last Name:  </div>
+          <div class="individual-lead-grid-container_item">{{ lead.last_name }} </div>
+          <div class="individual-lead-grid-container_item">Phone Number: </div>
+          <div class="individual-lead-grid-container_item">{{ lead.phone_nr }} </div>
+          <div class="individual-lead-grid-container_item">Source: </div>
+          <div class="individual-lead-grid-container_item">{{ lead.sources }} </div>
+          <div class="individual-lead-grid-container_item">Special Files: </div>
+          <div class="individual-lead-grid-container_item">{{ lead.special_files }} </div>
+        </div>
+
+</body>
+</html>

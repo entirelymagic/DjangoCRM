@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leads</title>
+    <link href="{% static 'leads/css/leads.css' %}" rel="stylesheet">
+</head>
+<body class = "radiant_blue_green">
+    <h2>This are all of our leads</h2>
+
+        {% for lead in leads %}
+        <div class="lead-grid-container">
+          <div class="lead-grid-item"><a href="/leads/{{ lead.pk }}/">{{ lead.first_name }} {{ lead.last_name }}</a></div>
+          <div class="lead-grid-item">Phone Number: {{ lead.phone_nr }} </div>
+        </div>
+        {% endfor %}
+
+</body>
+</html>

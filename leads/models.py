@@ -45,7 +45,7 @@ class Lead(models.Model):
     )
 
     profile_picture = models.ImageField(blank=True, null=True)
-    special_files = models.FileField()
+    special_files = models.FileField(blank=True)
 
     # foreignKey to agent, on_delete set to null, null value must be True for this.
     agent = models.ForeignKey('Agent', on_delete=models.SET_NULL, null=True)

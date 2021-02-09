@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 from .secrets import django_sk
+import os
 from pathlib import Path
 from db_loggin import db_name, db_host, db_user_name, db_port, db_user_pass
 
@@ -130,5 +131,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
 
 AUTH_USER_MODEL = "leads.user"  # tell change we have custom user model (name of the app.User)
