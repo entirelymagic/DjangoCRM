@@ -156,6 +156,9 @@ venv.bak/
 # Rope project settings
 .ropeproject
 secrets.py
+db.sqlite3.py
+db_loggin.py
+
 # mkdocs documentation
 /site
 
@@ -163,6 +166,7 @@ secrets.py
 .mypy_cache/
 .dmypy.json
 dmypy.json
+
 
 # Pyre type checker
 .pyre/
