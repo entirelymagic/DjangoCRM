@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from phone_field import PhoneField
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 # User = get_user_model() # this is default user_model from django, Not Recommended.
 
@@ -34,7 +35,13 @@ class Lead(models.Model):
     )
     first_name = models.CharField(max_length=128)
     last_name = models.CharField(max_length=128)
-    age = models.IntegerField(default=0)
+    age = models.IntegerField(
+        default=0,
+        validators=[
+            MaxValueValidator(100),
+            MinValueValidator(1)
+        ]
+    )
     phone_nr = PhoneField(blank=True, help_text="Contact phone number.")
 
     phoned = models.BooleanField(default=False)
