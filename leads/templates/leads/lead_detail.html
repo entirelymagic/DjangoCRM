@@ -1,0 +1,31 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <h2>Lead details for {{ lead.first_name }} {{ lead.last_name }}</h2>
+
+    <div><<a href="{% url 'leads:lead-list' %}">Go Back</a></div>
+
+    <div class="individual-lead-grid-container">
+
+        <div class="individual-lead-grid-container_item">First Name:</div>
+        <div class="individual-lead-grid-container_item">{{ lead.first_name }} </div>
+        <div class="individual-lead-grid-container_item">Last Name:  </div>
+        <div class="individual-lead-grid-container_item">{{ lead.last_name }} </div>
+        <div class="individual-lead-grid-container_item">Phone Number: </div>
+        <div class="individual-lead-grid-container_item">{{ lead.phone_nr }} </div>
+        <div class="individual-lead-grid-container_item">Source: </div>
+        <div class="individual-lead-grid-container_item">{{ lead.sources }} </div>
+        <div class="individual-lead-grid-container_item">Special Files: </div>
+        <div class="individual-lead-grid-container_item">{{ lead.special_files }} </div>
+        <div class="individual-lead-grid-container_item">Special Files: </div>
+        <div class="individual-lead-grid-container_item">{{ lead.special_files }} </div>
+
+        <div></div>
+
+        <div>
+            <button class="button update_lead_btt" onclick="location.href='{% url "leads:lead-update" lead.pk %}'">Update</button>
+            <button class="button delete_lead_btt" onclick="location.href='{% url "leads:lead-delete" lead.pk %}'">Delete</button>
+        </div>
+
+    </div>
+{% endblock %}

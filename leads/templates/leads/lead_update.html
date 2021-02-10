@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+
+    {% block content %}
+    <h2>Update lead: {{ lead.first_name }} {{ lead.last_name }}</h2>
+
+    <<a href="/leads">Go Back</a>
+
+    <form method = "POST">
+        {% csrf_token %} <!-- csrf_token need for submiting forms -->
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+
+        <!-- will return a message if the post was successfully submitted or not-->
+        {% if messages %}
+        <ul class="messages">
+        {% for message in messages %}
+        <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+
+    </form>
+{% endblock %}

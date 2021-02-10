@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <p><a href={% url 'leads:lead-create' %}>Create a new lead</a></p>
+    <hr/>
+    <h2>This are all of our leads</h2>
+
+        {% for lead in leads %}
+        <div class="lead-grid-container">
+          <div class="lead-grid-item"><a href="{% url 'leads:lead-detail' lead.pk %}">{{ lead.first_name }} {{ lead.last_name }}</a></div>
+          <div class="lead-grid-item">Phone Number: {{ lead.phone_nr }} </div>
+        </div>
+        {% endfor %}
+{% endblock %}

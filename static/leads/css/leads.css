@@ -75,3 +75,22 @@ p {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
+
+#update_lead_details_btt {
+    position: relative;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.delete_lead_btt {background-color: #d61b1b;} /* Green */
+.update_lead_btt {background-color: #2ddb06;} /* Blue */

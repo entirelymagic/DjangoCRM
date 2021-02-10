@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lead Detail</title>
+    <link href="{% static 'leads/css/leads.css' %}" rel="stylesheet">
+
+</head>
+<body class = "radiant_blue_green">
+    <h2>Lead details for {{ lead.first_name }} {{ lead.last_name }}</h2>
+    
+    {% block content %}
+
+    {% endblock %}
+
+</body>
+</html>

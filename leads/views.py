@@ -11,7 +11,7 @@ def lead_list(request):
     context = {
         'leads': leads
     }
-    return render(request, "leads/leads.html", context)
+    return render(request, "leads/lead_list.html", context)
 
 
 def lead_detail(request, pk):
@@ -39,7 +39,20 @@ def lead_create(request):
 
 def lead_update(request, pk):
     lead = Lead.objects.get(id=pk)
+    form = LeadModelForm(instance=lead)
+    if request.method == "POST":
+        form = LeadModelForm(request.POST, instance=lead)
+        if form.is_valid():
+            form.save()
+            return redirect("/leads")
     context = {
-        "lead": lead,
+        "form": form,
+        "lead": lead
     }
     return render(request, "leads/lead_update.html", context)
+
+
+def lead_delete(request, pk):
+    lead = Lead.objects.get(id=pk)
+    lead.delete()
+    return redirect("/leads")
