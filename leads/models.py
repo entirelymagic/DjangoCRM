@@ -42,7 +42,7 @@ class Lead(models.Model):
             MinValueValidator(1)
         ]
     )
-    phone_nr = PhoneField(blank=True, help_text="Contact phone number.")
+    phone_nr =models.CharField(max_length=20)
 
     phoned = models.BooleanField(default=False)
 
