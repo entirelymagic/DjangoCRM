@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib import messages
 from .models import Lead, Agent
-from .forms import LeadForm, LeadModelForm
+from .forms import LeadModelForm
 
 
 def lead_list(request):

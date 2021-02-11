@@ -42,7 +42,6 @@ INSTALLED_APPS = [
 
     'leads',
 
-    'phone_field',
     'theme',
     'crispy_forms',
     "crispy_tailwind",
