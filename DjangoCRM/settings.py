@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 from .secrets import django_sk
+import os
 from pathlib import Path
 from db_loggin import db_name, db_host, db_user_name, db_port, db_user_pass
 
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'leads',
+
 ]
 
 MIDDLEWARE = [
@@ -57,7 +59,7 @@ ROOT_URLCONF = 'DjangoCRM.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],
+        'DIRS': [BASE_DIR / 'templates'],  # added base directory for templates
 
         'APP_DIRS': True,
         'OPTIONS': {
@@ -130,4 +132,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
+
 AUTH_USER_MODEL = "leads.user"  # tell change we have custom user model (name of the app.User)
+
+
+NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
+
