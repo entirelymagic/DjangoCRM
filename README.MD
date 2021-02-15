@@ -2,8 +2,8 @@
 
 > Provide the possibility to perform CRUD-L operations on Leads for specific agent. 
 
-<img src="https://prnt.sc/zmd8u0" width="300" alt="https://github.com/anaromina/assignment/edit/main/README.md">
-https://prnt.sc/zmd8u0
+<img src="https://j.gifs.com/3Q4jop.gif" alt="https://github.com/entirelymagic/DjangoCRM">
+
 ## Development setup
 
 ```.TODO: 
