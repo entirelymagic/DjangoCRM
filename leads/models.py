@@ -10,7 +10,7 @@ class User(AbstractUser):
     """
     Custom User model from auth.models AbstractUser
     """
-    phone_nr = PhoneField(blank=True, help_text="Contact phone number.")
+    phone_nr =models.CharField(max_length=20)
 
 
 class Agent(models.Model):

@@ -41,11 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'leads',
-
     'theme',
-    'crispy_forms',
-    "crispy_tailwind",
-    'tailwind',
 ]
 
 MIDDLEWARE = [
