@@ -4,7 +4,6 @@
 
 <img src="https://j.gifs.com/3Q4jop.gif" alt="https://github.com/entirelymagic/DjangoCRM">
 
-## Development setup
 
 ```.TODO: 
 - [x] Create basic templates/ django models. 
