@@ -5,21 +5,18 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title>Tailwind CSS Skeleton</title>
+		<title>Base File for DjangoCRM</title>
 		<meta name="description" content="">
 		<meta name="keywords" content="">
 		<meta name="author" content="">
 
-        <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css"
-    />
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 	</head>
 <body class = "radiant_blue_green">
-
-    <h2>Lead details for {{ lead.first_name }} {{ lead.last_name }}</h2>
-    
+    {% include "navbar.html" %}
     {% block content %}
 
     {% endblock %}
-
+    {% include "scripts.html" %}
 </body>
 </html>
