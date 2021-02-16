@@ -135,9 +135,13 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
-
+STATIC_ROOT = "static_root"  # Root folder after everything will be based in one folder.
 AUTH_USER_MODEL = "leads.user"  # tell change we have custom user model (name of the app.User)
 
 
 NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # this will print to console emails sent with django
+
+LOGIN_REDIRECT_URL = '/leads'
+LOGOUT_REDIRECT_URL = '/leads'
