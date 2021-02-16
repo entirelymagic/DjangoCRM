@@ -144,3 +144,4 @@ NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # this will print to console emails sent with django
 
 LOGIN_REDIRECT_URL = '/leads'
+LOGOUT_REDIRECT_URL = '/leads'
