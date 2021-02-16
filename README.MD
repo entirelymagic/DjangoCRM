@@ -1,6 +1,8 @@
 # Django CRM PROJECT
 
-> Provide the possibility to perform CRUD-L operations on Leads for specific agent. 
+> Using : Django, Python and TailWindCSS, HTML, PosgreSQL database on AWS
+
+> Provide the possibility to perform CRUD-L operations on Leads from a specific agent. 
 
 <img src="https://j.gifs.com/3Q4jop.gif" alt="https://github.com/entirelymagic/DjangoCRM">
 
