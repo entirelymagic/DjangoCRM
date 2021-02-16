@@ -135,7 +135,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
-
+STATIC_ROOT = "static_root"  # Root folder after everything will be based in one folder.
 AUTH_USER_MODEL = "leads.user"  # tell change we have custom user model (name of the app.User)
 
 
