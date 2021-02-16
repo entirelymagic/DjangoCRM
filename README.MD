@@ -1,6 +1,6 @@
 # Django CRM PROJECT
 
-> Provide the possibility to perform CRUD-L operations on Leads for specific agent. 
+> Provide the possibility to perform CRUD-L operations on Leads for a specific agent. 
 
 <img src="https://prnt.sc/zmd8u0" width="300" alt="https://github.com/anaromina/assignment/edit/main/README.md">
 https://prnt.sc/zmd8u0
