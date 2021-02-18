@@ -14,7 +14,7 @@
 - [x] Create basic templates/ django models. 
 - [x] CRUD opperations on leads
 - [x] Sending Emails
-- [] Authentication
+- [x] Authentication
 - [] Auth Permission
 - [] Agent details and CRUD operations
 - [] Deployment
