@@ -13,11 +13,20 @@ class User(AbstractUser):
     phone_nr =models.CharField(max_length=20)
 
 
+class UserProfile(models.Model):
+    """A profile class that have one User."""
+    user = models.OneToOneField(User, on_delete=models.CASCADE)  # all details are taken from the user model
+
+    def __str__(self):
+        return self.user.username
+
+
 class Agent(models.Model):
     """
     Agent model, each  have a name, last name and phone number/optional from the User logged in to the system.
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    organization = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.user.email
