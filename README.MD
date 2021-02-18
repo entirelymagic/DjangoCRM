@@ -15,7 +15,7 @@
 - [x] CRUD opperations on leads
 - [x] Sending Emails
 - [x] Authentication
-- [] Auth Permission
+- [x] Auth Permission
 - [] Agent details and CRUD operations
 - [] Deployment
 ```
