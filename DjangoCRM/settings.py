@@ -145,3 +145,4 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # this will pr
 
 LOGIN_REDIRECT_URL = '/leads'
 LOGOUT_REDIRECT_URL = '/leads'
+LOGIN_URL = '/login'  # specify the LOGIN URL in order to be redirected by LoginRequiredMixin
