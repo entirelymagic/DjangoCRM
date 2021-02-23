@@ -18,4 +18,12 @@ class AgentCreateView(LoginRequiredMixin, generic.CreateView):
     form_class = AgentModelForm
 
     def get_success_url(self):
-        reverse("agents:agent-list")
+        """If the creation of agent is successful go to agent list view."""
+        return reverse("agents:agent-list")
+
+    def form_valid(self, form):
+        """if the form is valid add organization to agent from the user and commit it to database."""
+        agent = form.save(commit=False)  # so it is not saved to database now
+        agent.organization = self.request.user.userprofile
+        agent.save()  # Commit to database
+        return super(AgentCreateView, self).form_valid(form)
