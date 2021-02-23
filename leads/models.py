@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 from phone_field import PhoneField
 from django.core.validators import MinValueValidator, MaxValueValidator
+from django.db.models.signals import post_save  #a add information after it is saved to db
 
 # User = get_user_model() # this is default user_model from django, Not Recommended.
 
@@ -69,3 +70,12 @@ class Lead(models.Model):
     def __str__(self):
         return f'{self.first_name} {self.last_name}, phone_nr: {self.phone_nr}, Source: {self.sources}'
 
+
+def post_user_created_signal(sender, instance, created, **kwargs):
+    """Create a user profile in the moment a user is created using signals."""
+    print(instance, created)
+    if created:
+        UserProfile.objects.create(user=instance)
+
+
+post_save.connect(post_user_created_signal, sender=User)
