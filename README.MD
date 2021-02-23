@@ -16,7 +16,7 @@
 - [x] Sending Emails
 - [x] Authentication
 - [x] Auth Permission
-- [] Agent details and CRUD operations
+- [x] Agent details and CRUD operations
 - [] Deployment
 ```
 
