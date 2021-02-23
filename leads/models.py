@@ -2,7 +2,8 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 from phone_field import PhoneField
 from django.core.validators import MinValueValidator, MaxValueValidator
-from django.db.models.signals import post_save  #a add information after it is saved to db
+from django.db.models.signals import post_save  # a add information after it is saved to db
+
 
 # User = get_user_model() # this is default user_model from django, Not Recommended.
 
@@ -11,7 +12,10 @@ class User(AbstractUser):
     """
     Custom User model from auth.models AbstractUser
     """
-    phone_nr =models.CharField(max_length=20)
+    # User will be the organizer when it is first created
+    is_organizer = models.BooleanField(default=True)
+    is_agent = models.BooleanField(default=False)
+    phone_nr = models.CharField(max_length=20)
 
 
 class UserProfile(models.Model):
@@ -52,7 +56,7 @@ class Lead(models.Model):
             MinValueValidator(1)
         ]
     )
-    phone_nr =models.CharField(max_length=20)
+    phone_nr = models.CharField(max_length=20)
 
     phoned = models.BooleanField(default=False)
 
