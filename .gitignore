@@ -191,3 +191,6 @@ pyvenv.cfg
 .venv
 pip-selfcheck.json
 
+# Visual studio code  Extensions
+
+PythonImportHelper-v2-Completion.json
