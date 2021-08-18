@@ -13,10 +13,10 @@
 ```.TODO: 
 - [x] Create basic templates/ django models. 
 - [x] CRUD opperations on leads
-- [] Sending Emails
-- [] Authentication
-- [] Auth Permission
-- [] Agent details and CRUD operations
+- [x] Sending Emails
+- [x] Authentication
+- [x] Auth Permission
+- [x] Agent details and CRUD operations
 - [] Deployment
 ```
 

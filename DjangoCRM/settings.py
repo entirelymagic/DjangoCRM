@@ -33,13 +33,16 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    "django.contrib.admin",
-    "django.contrib.auth",
-    "django.contrib.contenttypes",
-    "django.contrib.sessions",
-    "django.contrib.messages",
-    "django.contrib.staticfiles",
-    "leads",
+
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+
+    'leads',
+    'agents',
 ]
 
 MIDDLEWARE = [
@@ -143,5 +146,7 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"  # this will pr
 LOGIN_REDIRECT_URL = "/leads"
 LOGOUT_REDIRECT_URL = "/leads"
 
+LOGIN_URL = '/login'  # specify the LOGIN URL in order to be redirected by LoginRequiredMixin
 
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
+
